@@ -3,7 +3,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__logo">
         <a className="navbar__logo__link" href="/">
-          The Skill Shop
+          Knack
         </a>
       </div>
       <div className="navbar__links">

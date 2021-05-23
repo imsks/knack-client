@@ -9,6 +9,7 @@ export const FormLabelInputGroup = (props) => {
     handleInput,
     required = false,
     multiple = false,
+    disabled = false,
   } = props;
 
   return (
@@ -20,6 +21,7 @@ export const FormLabelInputGroup = (props) => {
         onChange={handleInput}
         required={required}
         multiple={multiple}
+        disabled={disabled}
       />
     </div>
   );

@@ -13,6 +13,21 @@ export const SORT_BY_OPTIONS = [
   },
 ];
 
+export const INPUT_FIELD_TYPES = [
+  {
+    label: "Text",
+    value: "text",
+  },
+  {
+    label: "Number",
+    value: "number",
+  },
+  {
+    label: "Password",
+    value: "password",
+  },
+];
+
 export const selectStyles = {
   control: (base) => ({
     ...base,

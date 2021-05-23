@@ -8,18 +8,25 @@ export const handleScheduelMeeting = (event) => {
 
   if (isScheduelMeetingSuccess) {
     isScheduelMeetingSuccess = !isScheduelMeetingSuccess;
-
-    return toast.error("Slot not available!", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-    });
+    return toastError("Slot not available!");
   }
 
   isScheduelMeetingSuccess = !isScheduelMeetingSuccess;
 
-  return toast.success("Slot book!", {
+  return toastSuccess("Slot booked!");
+};
+
+export const toastError = (message) => {
+  return toast.error(message, {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+  });
+};
+
+export const toastSuccess = (message) => {
+  return toast.success(message, {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: true,
