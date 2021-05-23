@@ -35,10 +35,6 @@
     font-size: 1.4rem;
   }
 
-  &:hover {
-    transform: scale(0.95);
-  }
-
   &:disabled {
     background-color: rgba($color: $color-grey, $alpha: 0.8);
     color: rgba($color: $color-white, $alpha: 0.5);

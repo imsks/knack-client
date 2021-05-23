@@ -16,17 +16,9 @@
   }
 
   &__links {
-    width: 25%;
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
-
-    &__item {
-      font-size: 1.5rem;
-      text-decoration: none;
-      font-weight: 500;
-      color: $color-black;
-    }
 
     &__button {
         background-color: $color-black;

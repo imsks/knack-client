@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
+import { EmployeeCardContainer } from "../components/cards";
+import Toast from "../components/toast";
+import useEmployeeData from "../hooks/useEmployeeData";
+import { handleSortBy } from "../utils/handling.functions";
+import { SortByContainer } from "../components/sections/Sort";
 
 const Homepage = () => {
+  const [filterData, setFilterData] = useState([]);
+
+  const { employeesData } = useEmployeeData();
+
+  const onHandleSortBy = (sortBy, selectedData) => {
+    const filteredData = handleSortBy(sortBy, selectedData, employeesData);
+
+    setFilterData(filteredData);
+  };
+
   return (
     <div className="page">
       <div className="page__container">
@@ -14,13 +29,11 @@ const Homepage = () => {
                   them depending on their availibility"
               />
 
-              <div className="cards">
-                <div className="cards__item">
-                  <div className="cards__item__content"></div>
+              <SortByContainer onHandleSortBy={onHandleSortBy} />
 
-                  <div className="card__actions"></div>
-                </div>
-              </div>
+              <EmployeeCardContainer filterData={filterData} />
+
+              <Toast />
             </div>
           </div>
         </div>
