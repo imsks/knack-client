@@ -11,7 +11,7 @@ const useEmployeeData = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:8000/api/v1/employee/",
+      url: `${process.env.REACT_APP_BACKEND_API_URL}/employee`,
     })
       .then((res) => {
         const { employees } = res.data;
